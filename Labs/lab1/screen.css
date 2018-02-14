@@ -2,47 +2,244 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+/* stylelint-disable*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}html{line-height:1}body{line-height:inherit}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/* stylelint-enable */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+/* Begin site styles below */
+
+/* Base Styles */
+/*
+  Hint: these tend to be
+  1. element selectors
+  2. concerned with color and typography
+  3. basic element presenation
+*/
+
+/*
+  Setting type with a 4:3 modular scale
+  http://www.modularscale.com/?18&px&1.333
+*/
+
 body {
-	line-height: 1;
+  font-size:1.25em;
+  line-height:1.25em;
+  background-color: #2980B9;
 }
-ol, ul {
-	list-style: none;
+
+h1 {
+padding-top: 17px;
+padding-bottom: 17px;
+font-weight: bold;
 }
-blockquote, q {
-	quotes: none;
+
+p {
+  font: sans-serif;
+  margin-top: 12px
+  margin-bottom: 6px;
+  padding-top: 8px;
+  
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+h1 {
+  font-style:none;
+  padding-top: 1.6em;
+
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+h2 {
+
+  padding-top:1em;
+  font-size:1.5em;
+  line-height:1em;
+  font-style: italic;
+
 }
+
+h3 {
+  font-style: bold;
+  font-weight:bold;
+  text-decoration: underline solid;
+  font-size: 1.0em;
+  line-height: 1em;
+
+}
+ul {
+    list-style-type: circle;
+}
+
+li {
+  padding-bottom:0.5em;
+}
+
+ol li {
+  padding-top: 0.222em;
+  padding-bottom:1em;
+  list-style-type: none;
+}
+ul li {
+  padding-bottom: 0.222em;
+  list-style-type:disc;
+}
+li a {
+    float: left;
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+article {
+  padding-bottom: 1.125em;
+}
+
+footer {
+  background-color:none;
+  position:absolute;
+  width: 75%
+  display:flex;
+}
+
+figcaption {
+  padding-bottom: 1.125em;
+  text-align: center;
+}
+
+/* Layout Styles */
+/*
+  Hint: these tend to be
+  1. IDs; but also classes, sometimes
+  2. concerned with layout and spatial
+     relationships
+*/
+
+#navmenu {
+  position:fixed;
+  width: 100%;
+  top:0;
+  left:0;
+  right:0;
+  font-weight:bolder;
+  list-style-type: none;
+  background-color:#000000;
+  text-align:center;
+
+}
+
+#navmenu li {
+  float: right;
+  width: 33.33333333%;
+  blackground-color: #A9CCE3;
+}
+
+#navmenu a {
+  display:block;
+  width:100%;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 0.5em;
+  padding-left:0em;
+  padding-bottom: 0.5em;
+  color: #A9CCE3;
+  text-align: center;
+}
+
+#navmenu a:hover {
+
+  align-items:center;
+  color: darkcyan;
+}
+
+#header {
+  font-family:sans-serif;
+  list-style-type: none;
+}
+
+#footer {
+  width:auto;
+}
+
+#images{
+  text-align:center;
+}
+/* Responsive Media */
+img,
+audio {
+  display: block;
+  width: 100%;
+}
+
+/* State Styles */
+.js abbr {
+  cursor: pointer;
+}
+#slideshow {
+  margin: auto;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+}
+@@media screen and (min-width: 350px) {
+  body {
+    padding-right: 11.423%;
+    padding-left: 11.423%;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  html {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  body {
+    padding-right: 9.41177%; /*80/850 = 0.0941177*/
+    padding-left:9.41177%;
+  }
+
+  #maintext {
+    width:50%
+    float: left;
+  }
+  #images {
+    width:46%
+    margin-left:4%;
+    float: none;
+  }
+  #footer {
+    clear:both;
+  }
+
+  .flexbox #interests,
+  .flexbox #photosection,
+  .flexbox #resumecontent,
+  .flexbox #maintext
+  .flexbox #images {
+    display:flex;
+    flex-flow: wrap;
+  }
+  #slideshow {
+    margin: auto;
+    position: absolute;
+    padding-top: 1.222222em;
+    padding-bottom:1.222222em;
+
+  .slide {
+    position: absolute;
+    padding-top: 1.222222em;
+    padding-bottom:1.222222em;
+  }
+
+}
+/* Modular Styles */
+/*
+  Repeating style patterns.
+  Hint: these tend to be:
+  1. classes and relationship selectors
+  2. concerned with adjustments to base styles,
+      spacing, color, etc. etc.
+*/
