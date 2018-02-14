@@ -173,6 +173,7 @@
 body {
   font-size:1.25em;
   line-height:1.25em;
+  padding: 17px;
   background-color: #2280B9;
 }
 
@@ -180,6 +181,7 @@ h1 {
 padding-top: 17px;
 padding-bottom: 17px;
 font-weight: bold;
+background-color: #8FBC8F;
 }
 
 p {
